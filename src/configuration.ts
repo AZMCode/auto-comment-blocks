@@ -151,6 +151,9 @@ export class Configuration {
         if (line.text.search(/^\s*\/\/!\s*/) !== -1) {
           style = '//!';
         }
+        if (line.text.search(/^\s*\/\/\/ \/\/\s*/) !== -1) {
+          style = '/// //';
+        }
 
       } else if (style === '#' && line.text.search(/^\s*#\s*/) !== -1) {
         indentRegex = /#/;
